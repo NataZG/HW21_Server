@@ -8,22 +8,42 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    // MARK: Internal
+
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fetchImage()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true // будет скрываться после остановки
     }
-    
 
-    /*
-    // MARK: - Navigation
+    // MARK: Private
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private let imageUrl = "https://images.pexels.com/photos/2327372/pexels-photo-2327372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+
+    private func fetchImage() {
+        guard let url = URL(string: imageUrl) else { return }
+
+//        let session = URLSession.shared // синглтон
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            if let response = response {
+                print(response)
+            }
+           
+            if let data = data, let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.imageView.image = image
+                }
+            }
+        }.resume()
     }
-    */
-
 }

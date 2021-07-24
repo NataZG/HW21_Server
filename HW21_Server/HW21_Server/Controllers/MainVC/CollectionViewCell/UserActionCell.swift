@@ -9,4 +9,5 @@ import UIKit
 
 class UserActionCell: UICollectionViewCell {
     
+    @IBOutlet weak var userActionLabel: UILabel!
 }
