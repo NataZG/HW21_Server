@@ -34,18 +34,25 @@ class UsersVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "goToAddress" else { return }
+        /* guard segue.identifier == "goToAddress" else { return }
        guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let address = UsersVC.users[indexPath.row]
-        let addressVC = segue.destination as! AddressVC
-        addressVC.userAddress = [address]
+        let addressVC = segue.destination as! AddressVC*/
+        guard segue.identifier == "goToAddress" else { return }
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+
+                let AddressVC = segue.destination as! AddressVC
+        AddressVC.index = indexPath.row
 
         
         guard segue.identifier == "goToCompany" else { return }
-       guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let company = UsersVC.users[indexPath.row]
-        let companyVC = segue.destination as! CompanyVC
-        companyVC.userCompany = [company]
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+                let CompanyVC = segue.destination as! CompanyVC
+        CompanyVC.index = indexPath.row
+        CompanyVC.modalPresentationStyle = .fullScreen
+        CompanyVC.modalTransitionStyle = .coverVertical
+        present(CompanyVC, animated: true, completion: nil)
+
     }
 
 

@@ -22,7 +22,7 @@ class ImageViewController: UIViewController {
 
     // MARK: Private
 
-    private let imageUrl = "https://images.unsplash.com/photo-1529528070131-eda9f3e90919?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhYmxlJTIwbW91bnRhaW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    private let imageUrl = "https://images.unsplash.com/photo-1609428275645-7ab5027d4f7b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHRhYmxlJTIwbW91bnRhaW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 
     private func fetchImage() {
         guard let url = URL(string: imageUrl) else { return }

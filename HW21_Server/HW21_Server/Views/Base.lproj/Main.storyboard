@@ -76,14 +76,14 @@
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="g01-Dw-BEu" customClass="UserCell" customModule="HW21_Server" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="330.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="386.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g01-Dw-BEu" id="dev-Wb-4Vm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="330.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="386.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3uc-u5-Vwb">
-                                            <rect key="frame" x="25" y="25" width="364" height="280.5"/>
+                                            <rect key="frame" x="25" y="25" width="364" height="336.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boV-G1-ZFC">
                                                     <rect key="frame" x="0.0" y="0.0" width="364" height="40"/>
@@ -101,23 +101,33 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iB-Ao-11r">
-                                                    <rect key="frame" x="0.0" y="120" width="364" height="40.5"/>
+                                                    <rect key="frame" x="0.0" y="120" width="364" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6r-TT-KjP">
-                                                    <rect key="frame" x="0.0" y="180.5" width="364" height="40"/>
+                                                    <rect key="frame" x="0.0" y="180" width="364" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-Sp-DPX">
-                                                    <rect key="frame" x="0.0" y="240.5" width="364" height="40"/>
+                                                    <rect key="frame" x="0.0" y="240" width="364" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcj-fu-rct">
+                                                    <rect key="frame" x="0.0" y="300" width="364" height="36.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="See Company">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="i1Y-v5-9cv" kind="presentation" identifier="goToCompany" id="5tc-8R-22H"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="BfP-Sp-DPX" firstAttribute="height" secondItem="boV-G1-ZFC" secondAttribute="height" id="6CN-Sx-kEG"/>
@@ -155,13 +165,7 @@
                             <outlet property="delegate" destination="mYp-lp-EaL" id="Wxh-Ec-tbP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="er8-Xf-k1U">
-                        <barButtonItem key="rightBarButtonItem" title="Companies list" id="L7t-jD-QXp">
-                            <connections>
-                                <segue destination="i1Y-v5-9cv" kind="presentation" identifier="goToCompanies" id="2sn-Ud-DQK"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="er8-Xf-k1U"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrV-Ww-hlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,7 +239,7 @@
                                     <outlet property="street" destination="73z-Er-zUg" id="zKh-E4-XKT"/>
                                     <outlet property="suite" destination="Cn6-zx-8LP" id="Fog-yx-1G9"/>
                                     <outlet property="zipcode" destination="HZU-aZ-EfO" id="uFM-u1-pl8"/>
-                                    <segue destination="aZV-bL-hhu" kind="show" identifier="goToMap" id="0m7-2W-Hnb"/>
+                                    <segue destination="aZV-bL-hhu" kind="show" identifier="goToMap" id="59L-iH-GTF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -276,7 +280,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OHh-BK-dYT"/>
                     <connections>
-                        <outlet property="map" destination="Dgc-KE-amX" id="tSf-2E-TuX"/>
+                        <outlet property="map" destination="Dgc-KE-amX" id="42A-9z-a7S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zO-89-xGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,31 +11,31 @@ class AddressVC: UITableViewController {
 
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
 
-    var userAddress: [User] = []
+    static var coordinates: [Address] = []
 
-    /*:var index: Int!
-        var userAddress: User {
-            UsersVC.users[index]
-        }*/
+    var index: Int!
+    var userAddress: User {
+        UsersVC.users[index]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        userAddress.count
+        1
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
-        let user = userAddress[indexPath.row]
+        let user = userAddress
         cell.configure(with: user)
         return cell
     }
+
 
     // MARK: - Map test
 
@@ -46,21 +46,4 @@ class AddressVC: UITableViewController {
         show(mapVC, sender: nil)
     }*/
 
-    func fetchData() {
-        guard let url = URL(string: jsonUrl) else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { return }
-            do {
-                self.userAddress = try JSONDecoder().decode([User].self, from: data)
-                print(self.userAddress)
-            } catch {
-                print(error)
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-        task.resume()
-    }
 }

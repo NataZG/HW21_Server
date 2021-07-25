@@ -11,6 +11,7 @@
 		41B4678E26AD4419000B2F49 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4678D26AD4419000B2F49 /* AddressCell.swift */; };
 		41B4679826ADA2DB000B2F49 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4679726ADA2DB000B2F49 /* CompanyCell.swift */; };
 		41B4679A26ADA2F0000B2F49 /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4679926ADA2F0000B2F49 /* CompanyVC.swift */; };
+		41B4679C26ADFA94000B2F49 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4679B26ADFA94000B2F49 /* MapVC.swift */; };
 		41D0E9CE26ABDE2900B7FB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0E9CD26ABDE2900B7FB35 /* AppDelegate.swift */; };
 		41D0E9D026ABDE2900B7FB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0E9CF26ABDE2900B7FB35 /* SceneDelegate.swift */; };
 		41D0E9D526ABDE2900B7FB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D0E9D326ABDE2900B7FB35 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		41B4678D26AD4419000B2F49 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		41B4679726ADA2DB000B2F49 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		41B4679926ADA2F0000B2F49 /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
+		41B4679B26ADFA94000B2F49 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = HW21_Server/Controllers/Map/MapVC.swift; sourceTree = SOURCE_ROOT; };
 		41D0E9CA26ABDE2900B7FB35 /* HW21_Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW21_Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D0E9CD26ABDE2900B7FB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D0E9CF26ABDE2900B7FB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		41B4678F26AD8646000B2F49 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				41B4679B26ADFA94000B2F49 /* MapVC.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				41B4678C26AD4381000B2F49 /* AddressVC.swift in Sources */,
 				41D0E9EF26ABDFD800B7FB35 /* UserCell.swift in Sources */,
+				41B4679C26ADFA94000B2F49 /* MapVC.swift in Sources */,
 				41D0E9F526ABE07400B7FB35 /* UserActionCell.swift in Sources */,
 				41D0E9CE26ABDE2900B7FB35 /* AppDelegate.swift in Sources */,
 				41D0E9F126ABE00F00B7FB35 /* ImageViewController.swift in Sources */,
