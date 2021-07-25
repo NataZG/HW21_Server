@@ -39,6 +39,12 @@ class UsersVC: UITableViewController {
         let address = users[indexPath.row]
         let addressVC = segue.destination as! AddressVC
         addressVC.userAddress = [address]
+        
+        guard segue.identifier == "goToCompany" else { return }
+       guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let company = users[indexPath.row]
+        let companyVC = segue.destination as! CompanyVC
+        companyVC.userCompany = [company]
     }
 
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		41B4678C26AD4381000B2F49 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4678B26AD4381000B2F49 /* AddressVC.swift */; };
 		41B4678E26AD4419000B2F49 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4678D26AD4419000B2F49 /* AddressCell.swift */; };
+		41B4679826ADA2DB000B2F49 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4679726ADA2DB000B2F49 /* CompanyCell.swift */; };
+		41B4679A26ADA2F0000B2F49 /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4679926ADA2F0000B2F49 /* CompanyVC.swift */; };
 		41D0E9CE26ABDE2900B7FB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0E9CD26ABDE2900B7FB35 /* AppDelegate.swift */; };
 		41D0E9D026ABDE2900B7FB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0E9CF26ABDE2900B7FB35 /* SceneDelegate.swift */; };
 		41D0E9D526ABDE2900B7FB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D0E9D326ABDE2900B7FB35 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		41B4678B26AD4381000B2F49 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
 		41B4678D26AD4419000B2F49 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		41B4679726ADA2DB000B2F49 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
+		41B4679926ADA2F0000B2F49 /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
 		41D0E9CA26ABDE2900B7FB35 /* HW21_Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW21_Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D0E9CD26ABDE2900B7FB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D0E9CF26ABDE2900B7FB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,13 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41B4678626AD42FD000B2F49 /* UserDetailsVC */ = {
+		41B4678626AD42FD000B2F49 /* UserAddressVC */ = {
 			isa = PBXGroup;
 			children = (
 				41B4678726AD4320000B2F49 /* TableViewCell */,
 				41B4678826AD4329000B2F49 /* TableViewController */,
 			);
-			path = UserDetailsVC;
+			path = UserAddressVC;
 			sourceTree = "<group>";
 		};
 		41B4678726AD4320000B2F49 /* TableViewCell */ = {
@@ -81,6 +85,31 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		41B4679426ADA283000B2F49 /* CompanyVC */ = {
+			isa = PBXGroup;
+			children = (
+				41B4679626ADA2C5000B2F49 /* TableViewCell */,
+				41B4679526ADA2B6000B2F49 /* TableViewController */,
+			);
+			path = CompanyVC;
+			sourceTree = "<group>";
+		};
+		41B4679526ADA2B6000B2F49 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41B4679926ADA2F0000B2F49 /* CompanyVC.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		41B4679626ADA2C5000B2F49 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				41B4679726ADA2DB000B2F49 /* CompanyCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		41D0E9C126ABDE2900B7FB35 = {
@@ -137,7 +166,8 @@
 				41D0E9E726ABDED500B7FB35 /* MainVC */,
 				41D0E9E626ABDEC700B7FB35 /* ImageVC */,
 				41D0E9E226ABDE6F00B7FB35 /* UsersVC */,
-				41B4678626AD42FD000B2F49 /* UserDetailsVC */,
+				41B4678626AD42FD000B2F49 /* UserAddressVC */,
+				41B4679426ADA283000B2F49 /* CompanyVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,8 +314,10 @@
 				41D0E9CE26ABDE2900B7FB35 /* AppDelegate.swift in Sources */,
 				41D0E9F126ABE00F00B7FB35 /* ImageViewController.swift in Sources */,
 				41B4678E26AD4419000B2F49 /* AddressCell.swift in Sources */,
+				41B4679A26ADA2F0000B2F49 /* CompanyVC.swift in Sources */,
 				41D0E9F726ABE09700B7FB35 /* User.swift in Sources */,
 				41D0E9F326ABE03C00B7FB35 /* MainViewController.swift in Sources */,
+				41B4679826ADA2DB000B2F49 /* CompanyCell.swift in Sources */,
 				41D0E9D026ABDE2900B7FB35 /* SceneDelegate.swift in Sources */,
 				41D0E9ED26ABDFA500B7FB35 /* UsersVC.swift in Sources */,
 			);
