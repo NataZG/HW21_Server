@@ -13,7 +13,7 @@ class AddressCell: UITableViewCell {
     @IBOutlet weak var suite: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var zipcode: UILabel!
-    
+
     func configure (with item: User) {
         street.text = item.address?.street
         suite.text = item.address?.suite

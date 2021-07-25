@@ -12,11 +12,11 @@ class CompanyVC: UITableViewController {
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
 
     var userCompany: [User] = []
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       fetchData()
+        fetchData()
     }
 
     // MARK: - Table view data source
@@ -24,7 +24,7 @@ class CompanyVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         userCompany.count
     }
-    
+
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell", for: indexPath) as! CompanyCell

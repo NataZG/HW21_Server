@@ -12,23 +12,23 @@ class UsersVC: UITableViewController {
     // MARK: Private
 
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
-
-    private var users: [User] = []
+  
+    static var users: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // fetchData()
+        fetchData()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        users.count
+        UsersVC.users.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserCell
-        let user = users[indexPath.row]
+        let user = UsersVC.users[indexPath.row]
         cell.configure(with: user)
         return cell
     }
@@ -36,13 +36,14 @@ class UsersVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goToAddress" else { return }
        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let address = users[indexPath.row]
+        let address = UsersVC.users[indexPath.row]
         let addressVC = segue.destination as! AddressVC
         addressVC.userAddress = [address]
+
         
         guard segue.identifier == "goToCompany" else { return }
        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let company = users[indexPath.row]
+        let company = UsersVC.users[indexPath.row]
         let companyVC = segue.destination as! CompanyVC
         companyVC.userCompany = [company]
     }
@@ -54,8 +55,8 @@ class UsersVC: UITableViewController {
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
             do {
-                self.users = try JSONDecoder().decode([User].self, from: data)
-                print(self.users)
+                UsersVC.users = try JSONDecoder().decode([User].self, from: data)
+                print(UsersVC.users)
             } catch {
                 print(error)
             }

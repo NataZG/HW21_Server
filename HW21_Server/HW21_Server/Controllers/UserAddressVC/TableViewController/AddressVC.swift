@@ -11,13 +11,16 @@ class AddressVC: UITableViewController {
 
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
 
-    var index: Int?
     var userAddress: [User] = []
-    
-    
+
+    /*:var index: Int!
+        var userAddress: User {
+            UsersVC.users[index]
+        }*/
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       fetchData()
+        fetchData()
     }
 
     // MARK: - Table view data source
@@ -25,7 +28,7 @@ class AddressVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         userAddress.count
     }
-    
+
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
@@ -33,7 +36,7 @@ class AddressVC: UITableViewController {
         cell.configure(with: user)
         return cell
     }
-    
+
     // MARK: - Map test
 
     /*:func passData() {

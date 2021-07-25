@@ -22,7 +22,7 @@ class ImageViewController: UIViewController {
 
     // MARK: Private
 
-    private let imageUrl = "https://images.pexels.com/photos/4305039/pexels-photo-4305039.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    private let imageUrl = "https://images.unsplash.com/photo-1529528070131-eda9f3e90919?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhYmxlJTIwbW91bnRhaW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 
     private func fetchImage() {
         guard let url = URL(string: imageUrl) else { return }
@@ -37,7 +37,7 @@ class ImageViewController: UIViewController {
             if let response = response {
                 print(response)
             }
-           
+
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
