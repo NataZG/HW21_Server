@@ -11,7 +11,7 @@ class PostsVC: UITableViewController {
 
     var posts: [Posts] = []
     var user: User!
-
+    //private let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
 
     override func viewWillAppear(_ animated: Bool) {
         getPosts()
@@ -51,11 +51,11 @@ class PostsVC: UITableViewController {
     }
 
     private func getPosts() {
-       guard let userId = user.id else { return }
-        let pathUrl = "\(ApiConstants.postsPath)?userId=\(userId)"
+      guard let userId = user.id else { return }
+      let pathUrl = "\(ApiConstants.postsPath)?userId=\(userId)"
 
-        guard let url = URL(string: pathUrl) else { return }
-
+       guard let url = URL(string: pathUrl) else { return }
+        //guard let url = URL(string: jsonUrl) else { return }
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
             do {
