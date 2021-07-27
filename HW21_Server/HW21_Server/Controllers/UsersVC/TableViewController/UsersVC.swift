@@ -14,6 +14,7 @@ class UsersVC: UITableViewController {
     private let jsonUrl = "https://jsonplaceholder.typicode.com/users"
   
     static var users: [User] = []
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +35,8 @@ class UsersVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /* guard segue.identifier == "goToAddress" else { return }
-       guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let address = UsersVC.users[indexPath.row]
-        let addressVC = segue.destination as! AddressVC*/
         guard segue.identifier == "goToAddress" else { return }
                 guard let indexPath = tableView.indexPathForSelectedRow else { return }
-
                 let AddressVC = segue.destination as! AddressVC
         AddressVC.index = indexPath.row
 
@@ -52,7 +48,7 @@ class UsersVC: UITableViewController {
         CompanyVC.modalPresentationStyle = .fullScreen
         CompanyVC.modalTransitionStyle = .coverVertical
         present(CompanyVC, animated: true, completion: nil)
-
+        
     }
 
 

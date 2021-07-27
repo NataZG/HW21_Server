@@ -17,6 +17,7 @@ class AddressVC: UITableViewController {
     var userAddress: User {
         UsersVC.users[index]
     }
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,17 @@ class AddressVC: UITableViewController {
         cell.configure(with: user)
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPosts",
+           let PostsVC = segue.destination as? PostsVC {
+            PostsVC.user = userAddress
+    }
+       /* if segue.identifier == "albumSegue",
+           let AlbumsVC = segue.destination as? AlbumsVC {
+        AlbumsVC.user = user
+         }*/
+    }
 
 
     // MARK: - Map test
@@ -47,3 +59,4 @@ class AddressVC: UITableViewController {
     }*/
 
 }
+ 
