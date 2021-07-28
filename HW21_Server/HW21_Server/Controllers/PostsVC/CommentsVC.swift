@@ -10,10 +10,10 @@ import UIKit
 class CommentsVC: UITableViewController {
 
     var comments: [Comments] = []
+    var post: Comments!
 
     // MARK: - Table view data source
     
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
     }

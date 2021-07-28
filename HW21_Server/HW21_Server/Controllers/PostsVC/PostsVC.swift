@@ -11,6 +11,7 @@ class PostsVC: UITableViewController {
 
     var posts: [Posts] = []
     var user: User!
+    var post: Comments!
     //private let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
 
     override func viewWillAppear(_ animated: Bool) {
@@ -21,7 +22,7 @@ class PostsVC: UITableViewController {
         if segue.identifier == "showComments",
             let postId = sender as? Int,
             let commentsVC = segue.destination as? CommentsVC {
-            commentsVC.getComments(pathUrl: "\(ApiConstants.postsPath)/\(postId)/comments")
+           commentsVC.getComments(pathUrl: "\(ApiConstants.postsPath)/\(postId)/comments")
         } /*else if segue.identifier == "addPosts",
                   let addPostVC = segue.destination as? AddPostVC {
             addPostVC.user = user

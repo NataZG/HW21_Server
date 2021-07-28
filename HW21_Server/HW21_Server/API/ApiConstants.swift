@@ -14,4 +14,8 @@ class ApiConstants {
     //posts
     static let postsPath = serverPath + "posts"
     static let postPathURL = URL(string: postsPath)
+    
+    //comments
+    static let commentsPath = serverPath + "comments"
+    static let commentsPathURL = URL(string: commentsPath)
 }
