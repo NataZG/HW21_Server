@@ -4,7 +4,7 @@
 //
 //  Created by Nata on 31.07.2021.
 //
-
+import Alamofire
 import SwiftyJSON
 import UIKit
 
@@ -55,7 +55,7 @@ class AddPostVC: UIViewController {
         }
     }
     
-   /* @IBAction func addAFPostAction(_ sender: Any) {
+   @IBAction func addAFPostAction(_ sender: Any) {
         if let userId = user.id,
            let title = titlePostTF.text,
            let text = textPostTF.text,
@@ -68,19 +68,19 @@ class AddPostVC: UIViewController {
                 .responseJSON { response in
                     
                     debugPrint(response)
-                    print(response.reuest)
-                    print(response.response)
+                    print(response.request as Any)
+                    print(response.response as Any)
                     debugPrint(response.result)
                     
                     switch response.result {
                     case .success(let data):
                         print(data)
                         print(JSON(data))
-                        self?.navigationController?.popViewController(animated: true)
+                        self.navigationController?.popViewController(animated: true)
                     case .failure(let error):
                         print(error)
                     }
                 }
         }
-    }*/
+    }
 }
