@@ -22,11 +22,12 @@ class PostsVC: UITableViewController {
         if segue.identifier == "showComments",
             let postId = sender as? Int,
             let commentsVC = segue.destination as? CommentsVC {
+     
            commentsVC.getComments(pathUrl: "\(ApiConstants.postsPath)/\(postId)/comments")
-        } /*else if segue.identifier == "addPosts",
+        } else if segue.identifier == "addPosts",
                   let addPostVC = segue.destination as? AddPostVC {
             addPostVC.user = user
-         }*/
+         }
     }
 
 
