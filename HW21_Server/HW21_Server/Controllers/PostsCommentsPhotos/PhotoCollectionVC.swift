@@ -11,16 +11,16 @@ import AlamofireImage
 import SwiftyJSON
 
 class PhotoCollectionVC: UICollectionViewCell {
-    
+
     var photo: JSON!
-    
+
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+
     func configureCell() {
         photoImage.image = #imageLiteral(resourceName: "photo_2021-08-01 10.22.30")
     }
-    
+
     func getThumbnail() {
         if let thumbnailURL = photo["thumbnailURL"].string {
             if let image = CacheManager.shared.imageCache.image(withIdentifier: thumbnailURL) {
@@ -37,5 +37,5 @@ class PhotoCollectionVC: UICollectionViewCell {
             }
         }
     }
-    
+
 }

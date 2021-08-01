@@ -131,16 +131,21 @@
       "body": "Pam Pam",
       "userId": 1,
       "id": 22
+    },
+    {
+      "userId": 1,
+      "title": "Hello",
+      "body": "How are you?",
+      "id": 23
+    },
+    {
+      "body": "And you?",
+      "userId": 1,
+      "title": "Fine",
+      "id": 24
     }
   ],
   "comments": [
-    {
-      "postId": 1,
-      "id": 2,
-      "name": "quo vero reiciendis velit similique earum",
-      "email": "Jayne_Kuhic@sydney.com",
-      "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
-    },
     {
       "postId": 1,
       "id": 3,
