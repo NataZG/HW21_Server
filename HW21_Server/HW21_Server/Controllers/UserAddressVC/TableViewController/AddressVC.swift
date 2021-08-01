@@ -42,10 +42,10 @@ class AddressVC: UITableViewController {
            let PostsVC = segue.destination as? PostsVC {
             PostsVC.user = userAddress
     }
-       /* if segue.identifier == "albumSegue",
-           let AlbumsVC = segue.destination as? AlbumsVC {
-        AlbumsVC.user = user
-         }*/
+       if segue.identifier == "showAlbums",
+           let AlbumsVC = segue.destination as? AlbumsTableVC {
+        AlbumsVC.user = userAddress
+         }
     }
 
 

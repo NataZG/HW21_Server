@@ -60,7 +60,7 @@ class AddPostVC: UIViewController {
            let title = titlePostTF.text,
            let text = textPostTF.text,
            let url = ApiConstants.postPathURL {
-            let post: [String: Any] = ["userId": userId,
+            let post: Parameters = ["userId": userId,
                                        "title": title,
                                        "body": text]
             

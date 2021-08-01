@@ -51,9 +51,13 @@ class CommentsVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if editingStyle == .delete, let id = comments[indexPath.row].id {
             comments.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+           ApiService.deleteComment(idComment:id) { json, error in
+            print(json as Any)
+            print(error as Any)
+            }
         }
     }
 }

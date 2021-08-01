@@ -180,15 +180,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" rowHeight="357" id="rp8-Os-BIV" customClass="AddressCell" customModule="HW21_Server" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="357"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" rowHeight="390" id="rp8-Os-BIV" customClass="AddressCell" customModule="HW21_Server" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="390"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rp8-Os-BIV" id="4yu-Zo-4hb" customClass="UserDetailsCell" customModule="HW21_Server" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="RAZ-WR-YYF">
-                                            <rect key="frame" x="20" y="30" width="369" height="297"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="RAZ-WR-YYF">
+                                            <rect key="frame" x="20" y="30" width="369" height="330"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73z-Er-zUg">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="24"/>
@@ -200,7 +200,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cn6-zx-8LP">
-                                                    <rect key="frame" x="0.0" y="52" width="369" height="24"/>
+                                                    <rect key="frame" x="0.0" y="53" width="369" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="QzF-zt-irJ"/>
                                                     </constraints>
@@ -209,7 +209,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUk-ai-oa7">
-                                                    <rect key="frame" x="0.0" y="104" width="369" height="24"/>
+                                                    <rect key="frame" x="0.0" y="106" width="369" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="Znq-T1-X5P"/>
                                                     </constraints>
@@ -218,7 +218,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZU-aZ-EfO">
-                                                    <rect key="frame" x="0.0" y="156" width="369" height="24"/>
+                                                    <rect key="frame" x="0.0" y="159" width="369" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="WMz-FF-dI1"/>
                                                     </constraints>
@@ -227,7 +227,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrw-UY-qxR">
-                                                    <rect key="frame" x="0.0" y="208" width="369" height="61"/>
+                                                    <rect key="frame" x="0.0" y="212" width="369" height="89"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Posts">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,7 +237,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuo-Jx-SRx">
-                                                    <rect key="frame" x="0.0" y="297" width="369" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="330" width="369" height="0.0"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" id="q7N-cl-2FF"/>
                                                     </constraints>
@@ -264,7 +264,7 @@
                                     <outlet property="street" destination="73z-Er-zUg" id="zKh-E4-XKT"/>
                                     <outlet property="suite" destination="Cn6-zx-8LP" id="Fog-yx-1G9"/>
                                     <outlet property="zipcode" destination="HZU-aZ-EfO" id="uFM-u1-pl8"/>
-                                    <segue destination="aZV-bL-hhu" kind="show" identifier="goToMap" id="59L-iH-GTF"/>
+                                    <segue destination="Q2y-05-ZYb" kind="show" identifier="showAlbums" id="EOe-SS-HpZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -278,6 +278,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeh-3o-qQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928.985507246377" y="154.6875"/>
+        </scene>
+        <!--AlbumsAndPhotos-->
+        <scene sceneID="Pm1-XD-qPc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AlbumsAndPhotos" storyboardName="AlbumsAndPhotos" id="Q2y-05-ZYb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tbD-Mf-isp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNy-pE-VVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696" y="86"/>
         </scene>
         <!--PostsAndComments-->
         <scene sceneID="C0C-vb-FIH">
@@ -298,7 +308,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dgc-KE-amX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-44" width="414" height="940"/>
                                 <connections>
                                     <outlet property="delegate" destination="aZV-bL-hhu" id="8Eo-cT-cMt"/>
                                 </connections>

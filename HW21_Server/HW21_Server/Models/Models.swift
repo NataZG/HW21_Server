@@ -61,3 +61,17 @@ struct Comments: Codable {
     let name: String?
     let body: String?
 }
+
+struct Photos: Decodable {
+    let albumId: Int?
+    let id: Int?
+    let title: String?
+    let url: String?
+    let thumbnailUrl: String?
+}
+
+struct Albums: Decodable {
+    let userId: Int?
+    let id: Int?
+    let title: String?
+}
