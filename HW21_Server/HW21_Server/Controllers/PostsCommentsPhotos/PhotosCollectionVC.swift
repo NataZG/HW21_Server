@@ -13,7 +13,7 @@ import SwiftyJSON
 private let reuseIdentifier = "Cell"
 
 class PhotosCollectionVC: UICollectionViewController {
-    
+
     var user: User!
     var album: JSON!
     var photos: [JSON] = []
@@ -23,10 +23,10 @@ class PhotosCollectionVC: UICollectionViewController {
         title = album["title"].string
         getData()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         let layout = UICollectionViewFlowLayout()
-        let sizeWH  = UIScreen.main.bounds.width / 2 - 5
+        let sizeWH = UIScreen.main.bounds.width / 2 - 5
         layout.itemSize = CGSize(width: sizeWH, height: sizeWH)
         collectionView.collectionViewLayout = layout
     }
@@ -36,17 +36,17 @@ class PhotosCollectionVC: UICollectionViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let imageVC = segue.destination as? ImageVC,
-           let photo = sender as? JSON {
+            let photo = sender as? JSON {
             imageVC.photo = photo
         }
     }
-    
+
     func getData() {
         if let album = album,
-           let albumId = album["id"].int,
-           let url = URL(string:"\(ApiConstants.photosPath)?albumId=\(albumId)") {
-            
-            AF.request(url).responseJSON {response in
+            let albumId = album["id"].int,
+            let url = URL(string: "\(ApiConstants.photosPath)?albumId=\(albumId)") {
+
+            AF.request(url).responseJSON { response in
                 switch response.result {
                 case .success(let data):
                     self.photos = JSON(data).arrayValue
@@ -57,11 +57,11 @@ class PhotosCollectionVC: UICollectionViewController {
             }
         }
     }
-    
+
 
     // MARK: UICollectionViewDataSource
 
-   /* override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    /* override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }*/

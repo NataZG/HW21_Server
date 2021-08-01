@@ -22,12 +22,12 @@ class PostsVC: UITableViewController {
         if segue.identifier == "showComments",
             let postId = sender as? Int,
             let commentsVC = segue.destination as? CommentsVC {
-     
-           commentsVC.getComments(pathUrl: "\(ApiConstants.postsPath)/\(postId)/comments")
+
+            commentsVC.getComments(pathUrl: "\(ApiConstants.postsPath)/\(postId)/comments")
         } else if segue.identifier == "addPosts",
-                  let addPostVC = segue.destination as? AddPostVC {
+            let addPostVC = segue.destination as? AddPostVC {
             addPostVC.user = user
-         }
+        }
     }
 
 
@@ -36,7 +36,7 @@ class PostsVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsCell", for: indexPath)
         let post = posts[indexPath.row]
@@ -46,17 +46,17 @@ class PostsVC: UITableViewController {
         cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let postId = posts[indexPath.row].id
         performSegue(withIdentifier: "showComments", sender: postId)
     }
 
     private func getPosts() {
-      guard let userId = user.id else { return }
-      let pathUrl = "\(ApiConstants.postsPath)?userId=\(userId)"
+        guard let userId = user.id else { return }
+        let pathUrl = "\(ApiConstants.postsPath)?userId=\(userId)"
 
-       guard let url = URL(string: pathUrl) else { return }
+        guard let url = URL(string: pathUrl) else { return }
         //guard let url = URL(string: jsonUrl) else { return }
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
@@ -72,6 +72,6 @@ class PostsVC: UITableViewController {
         }
         task.resume()
     }
-    }
+}
 
-   
+

@@ -36,16 +36,16 @@ class AddressVC: UITableViewController {
         cell.configure(with: user)
         return cell
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPosts",
-           let PostsVC = segue.destination as? PostsVC {
+            let PostsVC = segue.destination as? PostsVC {
             PostsVC.user = userAddress
-    }
-       if segue.identifier == "showAlbums",
-           let AlbumsVC = segue.destination as? AlbumsTableVC {
-        AlbumsVC.user = userAddress
-         }
+        }
+        if segue.identifier == "showAlbums",
+            let AlbumsVC = segue.destination as? AlbumsTableVC {
+            AlbumsVC.user = userAddress
+        }
     }
 
 
@@ -59,4 +59,4 @@ class AddressVC: UITableViewController {
     }*/
 
 }
- 
+
