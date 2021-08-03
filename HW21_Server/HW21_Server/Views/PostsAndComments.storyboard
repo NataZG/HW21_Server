@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9P9-aY-lJi">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="r5c-47-2Ac">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="9P9-aY-lJi" customClass="PostsVC" customModule="HW21_Server" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XSE-Vw-d7h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsCell" rowHeight="61" id="U2F-Km-WqS" customClass="PostsCell" customModule="HW21_Server" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2F-Km-WqS" id="fDY-7s-OEv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9P9-aY-lJi" id="I4s-ZR-qeE"/>
+                            <outlet property="delegate" destination="9P9-aY-lJi" id="faG-fy-iLB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="EYt-WF-DnL">
+                        <barButtonItem key="rightBarButtonItem" title="Add Post" id="0Fv-IM-HVp">
+                            <connections>
+                                <segue destination="yPl-pB-iSV" kind="show" identifier="addPosts" id="24k-C6-VNB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Hp2-HR-OaX" kind="show" identifier="showComments" id="1Dv-8s-uaT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bec-mD-E6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223.18840579710147" y="59.598214285714285"/>
+        </scene>
+        <!--Add PostVC-->
+        <scene sceneID="5Jh-0B-oVC">
+            <objects>
+                <viewController id="yPl-pB-iSV" customClass="AddPostVC" customModule="HW21_Server" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YoD-I8-XeG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="jKe-Cc-D0v">
+                                <rect key="frame" x="25" y="70" width="364" height="237"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqS-ri-N50">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="titlePostTF:" destination="m68-PF-AuP" eventType="editingDidEnd" id="TGs-Sr-yna"/>
+                                        </connections>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gtc-wR-8GP">
+                                        <rect key="frame" x="0.0" y="119" width="364" height="118"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gtc-wR-8GP" secondAttribute="trailing" id="PNO-4g-g8Z"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-pW-3HQ">
+                                <rect key="frame" x="123" y="658" width="168" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crL-po-4JQ">
+                                        <rect key="frame" x="44" y="0.0" width="80" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Add post"/>
+                                        <connections>
+                                            <action selector="addPostAction:" destination="yPl-pB-iSV" eventType="touchUpInside" id="IGe-gh-ace"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgJ-HM-A82">
+                                        <rect key="frame" x="0.0" y="62" width="168" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Add Alamofire Post"/>
+                                        <connections>
+                                            <action selector="addAFPostAction:" destination="yPl-pB-iSV" eventType="touchUpInside" id="FoQ-IY-15w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NG6-8x-aur"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NG6-8x-aur" firstAttribute="bottom" secondItem="fI8-pW-3HQ" secondAttribute="bottom" constant="52" id="0Tb-d0-wnD"/>
+                            <constraint firstItem="jKe-Cc-D0v" firstAttribute="leading" secondItem="NG6-8x-aur" secondAttribute="leading" constant="25" id="7tr-1g-1Pc"/>
+                            <constraint firstItem="NG6-8x-aur" firstAttribute="trailing" secondItem="jKe-Cc-D0v" secondAttribute="trailing" constant="25" id="8oV-Zs-Mpv"/>
+                            <constraint firstItem="fI8-pW-3HQ" firstAttribute="leading" secondItem="NG6-8x-aur" secondAttribute="leading" constant="123" id="SZJ-xc-5i1"/>
+                            <constraint firstItem="NG6-8x-aur" firstAttribute="trailing" secondItem="fI8-pW-3HQ" secondAttribute="trailing" constant="123" id="TJz-gd-EyA"/>
+                            <constraint firstItem="jKe-Cc-D0v" firstAttribute="top" secondItem="NG6-8x-aur" secondAttribute="top" constant="70" id="caY-hm-pyK"/>
+                            <constraint firstItem="NG6-8x-aur" firstAttribute="bottom" secondItem="jKe-Cc-D0v" secondAttribute="bottom" constant="501" id="lKz-9k-QIX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wX0-bA-sTk"/>
+                    <connections>
+                        <outlet property="textPostTF" destination="Gtc-wR-8GP" id="93a-LC-kOz"/>
+                        <outlet property="titlePostTF" destination="uqS-ri-N50" id="Pxd-bk-S90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nW-Tn-m6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="m68-PF-AuP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-170"/>
+        </scene>
+        <!--CommentsVC-->
+        <scene sceneID="M7X-3s-1tb">
+            <objects>
+                <tableViewController id="Hp2-HR-OaX" customClass="CommentsVC" customModule="HW21_Server" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4lQ-rK-g2C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsCell" id="r0S-zL-mxq">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r0S-zL-mxq" id="527-Y2-wW3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hp2-HR-OaX" id="iHg-Gr-WE8"/>
+                            <outlet property="delegate" destination="Hp2-HR-OaX" id="aXp-vC-KuJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="k1X-k7-UV1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGT-bN-jwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="581"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,16 +8,17 @@
 import UIKit
 
 class UserCell: UITableViewCell {
+    @IBOutlet var nameLbl: UILabel!
+    @IBOutlet var usernameLbl: UILabel!
+    @IBOutlet var emailLbl: UILabel!
+    @IBOutlet var phoneLbl: UILabel!
+    @IBOutlet var websiteLbl: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with user: User) {
+        nameLbl.text = user.name
+        usernameLbl.text = user.username
+        emailLbl.text = user.email
+        phoneLbl.text = user.phone
+        websiteLbl.text = user.website
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
